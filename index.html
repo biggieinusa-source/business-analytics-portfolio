@@ -121,7 +121,17 @@
       margin-bottom: 12px;
     }
 
-    #contact {
+    #contact {.headshot {
+  display: block;
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+  margin: 0 auto 30px;
+  border: 5px solid white;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
       background-color: #e2e8f0;
       text-align: center;
     }
@@ -193,6 +203,9 @@
 
   <section id="about">
     <h2>About Me</h2>
+    <img src="gerald-hlabiso-headshot.jpeg"
+     alt="Professional headshot of Gerald Hlabiso"
+     class="headshot">
 
     <p>
       I am a Business Analytics graduate student with more than five years
