@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Gerald Hlabiso | Business Analytics Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      background-color: #f8fafc;
+    }
+
+    nav {
+      background-color: #0f172a;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+    }
+
+    nav h2 {
+      color: white;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 22px;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    .hero {
+      min-height: 85vh;
+      padding: 100px 8%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: linear-gradient(135deg, #0f172a, #1d4ed8);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      margin-bottom: 15px;
+    }
+
+    .hero h3 {
+      font-size: 1.5rem;
+      color: #bae6fd;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 720px;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #38bdf8;
+      color: #0f172a;
+      padding: 12px 22px;
+      margin-right: 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .button.secondary {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    section {
+      padding: 75px 8%;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 25px;
+      color: #0f172a;
+    }
+
+    .skills,
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    }
+
+    .card h3 {
+      color: #1d4ed8;
+      margin-bottom: 12px;
+    }
+
+    #contact {
+      background-color: #e2e8f0;
+      text-align: center;
+    }
+
+    #contact a {
+      color: #1d4ed8;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer {
+      background-color: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 22px;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+      .hero h1 {
+        font-size: 2.3rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <h2>Gerald Hlabiso</h2>
+
+    <div>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1>Hello, I’m Gerald Hlabiso</h1>
+
+    <h3>Business and Data Analyst</h3>
+
+    <p>
+      M.S. Business Analytics candidate at Saint Louis University with
+      experience in financial services, lending, customer experience,
+      financial analysis, risk analysis and data-driven decision-making.
+    </p>
+
+    <div>
+      <a class="button" href="#projects">View My Projects</a>
+
+      <a class="button secondary"
+         href="https://github.com/biggieinusa-source"
+         target="_blank">
+         Visit GitHub
+      </a>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+
+    <p>
+      I am a Business Analytics graduate student with more than five years
+      of professional experience in customer service and financial services.
+      I use analytical tools to examine business problems, identify patterns
+      and communicate practical recommendations. I am currently seeking OPT
+      opportunities in business analytics, data analytics, financial analysis
+      and risk analysis.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+
+    <div class="skills">
+      <div class="card">
+        <h3>Data Analysis</h3>
+        <p>Data cleaning, exploratory analysis, reporting and predictive modeling.</p>
+      </div>
+
+      <div class="card">
+        <h3>Tools</h3>
+        <p>Excel, Power BI, SQL, Python and Google Colab.</p>
+      </div>
+
+      <div class="card">
+        <h3>Business Analysis</h3>
+        <p>Financial analysis, risk analysis, KPIs and process improvement.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Featured Analytics Projects</h2>
+
+    <div class="projects">
+      <div class="card">
+        <h3>Loan Default Risk Prediction</h3>
+        <p>
+          Developed a machine-learning model to identify applicants who may
+          experience difficulty repaying a loan.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Retail Sales Predictive Modeling</h3>
+        <p>
+          Compared multiple regression models to predict sales using pricing,
+          promotions, inventory, seasonality and competitor information.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Employee Turnover Classification</h3>
+        <p>
+          Developed classification models to predict employee turnover and
+          support data-informed workforce-retention decisions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+
+    <p>Email: <a href="mailto:geraldhlabiso@gmail.com">geraldhlabiso@gmail.com</a></p>
+
+    <p>
+      <a href="https://www.linkedin.com/in/gerald-hlabiso-9899a4161/"
+         target="_blank">LinkedIn</a>
+      |
+      <a href="https://github.com/biggieinusa-source"
+         target="_blank">GitHub</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Gerald Hlabiso. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
