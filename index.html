@@ -2,9 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Gerald Hlabiso | Business and Data Analyst</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Gerald Hlabiso | Data Analyst</title>
 
   <style>
     * {
@@ -18,7 +22,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      line-height: 1.6;
+      line-height: 1.7;
       color: #1f2937;
       background-color: #f8fafc;
     }
@@ -35,6 +39,7 @@
 
     header h2 {
       margin: 0;
+      color: white;
     }
 
     nav a {
@@ -53,7 +58,7 @@
     }
 
     .hero {
-      min-height: 520px;
+      min-height: 600px;
       background-color: #e2e8f0;
       display: flex;
       align-items: center;
@@ -62,19 +67,31 @@
     }
 
     .hero-text {
-      max-width: 650px;
+      max-width: 760px;
+    }
+
+    .about-heading {
+      margin: 0 0 10px;
+      color: #0369a1;
+      font-size: 24px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
     .hero h1 {
-      margin-bottom: 5px;
+      margin: 0 0 5px;
       font-size: 48px;
       color: #0f172a;
     }
 
     .hero h3 {
-      margin-top: 0;
+      margin: 0 0 20px;
       color: #0369a1;
-      font-size: 25px;
+      font-size: 26px;
+    }
+
+    .hero p {
+      margin-bottom: 18px;
     }
 
     .headshot {
@@ -134,9 +151,13 @@
 
     .card h3 {
       color: #0369a1;
+      margin-top: 0;
     }
 
-    #about,
+    #skills {
+      background-color: #f8fafc;
+    }
+
     #projects {
       background-color: white;
     }
@@ -162,7 +183,7 @@
       background-color: #020617;
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 900px) {
       header {
         justify-content: center;
         text-align: center;
@@ -213,16 +234,43 @@
     </nav>
   </header>
 
-  <section class="hero">
+  <section class="hero" id="about">
+
     <div class="hero-text">
+      <h2 class="about-heading">About Me</h2>
+
       <h1>Gerald Hlabiso</h1>
 
-      <h3>Business and Data Analyst</h3>
+      <h3>Data Analyst</h3>
 
       <p>
-        M.S. Business Analytics candidate at Saint Louis University with
-        experience in financial services, lending, customer experience,
-        financial analysis, risk analysis and data-driven decision-making.
+        I am a graduate in Business Analytics at Saint Louis University with
+        a strong academic foundation in finance and business management,
+        supported by more than five years of professional experience in
+        financial services, lending, customer service, and data-driven
+        decision-making. My background has strengthened my ability to examine
+        complex business problems, analyze financial and operational data,
+        identify meaningful patterns, and communicate practical
+        recommendations.
+      </p>
+
+      <p>
+        I have developed skills in data analytics, financial analysis, risk
+        analysis, and predictive modeling, with hands-on experience using
+        Python, SQL, Excel, and Power BI. Through my coursework and portfolio
+        projects, I have applied regression, classification, data
+        visualization, and predictive modeling techniques to loan-default
+        risk, retail-sales forecasting, and employee-turnover analysis.
+      </p>
+
+      <p>
+        I am interested in applying analytics across industries, including
+        finance, healthcare, technology, retail, and the public sector. I am
+        particularly interested in opportunities where data can improve
+        performance, manage risk, optimize processes, and support better
+        business decisions. My goal is to combine my business and financial
+        experience with analytical tools to transform complex data into clear,
+        actionable, and valuable insights.
       </p>
 
       <div>
@@ -246,39 +294,28 @@
       src="gerald-hlabiso-headshot.jpeg.jpeg"
       alt="Professional headshot of Gerald Hlabiso"
     >
-  </section>
 
-  <section id="about">
-    <h2>About Me</h2>
-
-    <p>
-      I am a Business Analytics graduate student with more than five years
-      of professional experience in customer service and financial services.
-      I use analytical tools to examine business problems, identify patterns
-      and communicate practical recommendations. I am currently seeking OPT
-      opportunities in business analytics, data analytics, financial analysis
-      and risk analysis.
-    </p>
   </section>
 
   <section id="skills">
     <h2>Skills</h2>
 
     <div class="skills">
+
       <div class="card">
         <h3>Data Analysis</h3>
 
         <p>
-          Data cleaning, exploratory analysis, reporting and predictive
-          modeling.
+          Data cleaning, exploratory data analysis, reporting, data
+          visualization, forecasting, and predictive modeling.
         </p>
       </div>
 
       <div class="card">
-        <h3>Tools</h3>
+        <h3>Analytics Tools</h3>
 
         <p>
-          Excel, Power BI, SQL, Python and Google Colab.
+          Excel, Power BI, SQL, Python, Google Colab, and Microsoft Office.
         </p>
       </div>
 
@@ -286,9 +323,11 @@
         <h3>Business Analysis</h3>
 
         <p>
-          Financial analysis, risk analysis, KPIs and process improvement.
+          Financial analysis, risk analysis, KPI reporting, process
+          improvement, and data-driven decision-making.
         </p>
       </div>
+
     </div>
   </section>
 
@@ -296,12 +335,15 @@
     <h2>Projects</h2>
 
     <div class="projects">
+
       <div class="card">
         <h3>Loan Default Risk Prediction</h3>
 
         <p>
           Developed a machine-learning model to identify applicants who may
-          experience difficulty repaying a loan.
+          experience difficulty repaying a loan. The project demonstrates the
+          application of predictive analytics to credit-risk assessment and
+          lending decisions.
         </p>
       </div>
 
@@ -309,8 +351,9 @@
         <h3>Retail Sales Predictive Modeling</h3>
 
         <p>
-          Compared multiple regression models to predict sales using pricing,
-          promotions, inventory, seasonality and competitor information.
+          Compared multiple regression models to predict retail sales using
+          pricing, promotions, inventory, seasonality, store location, and
+          competitor information.
         </p>
       </div>
 
@@ -318,10 +361,12 @@
         <h3>Employee Turnover Classification</h3>
 
         <p>
-          Developed classification models to predict employee turnover and
-          support data-informed workforce-retention decisions.
+          Developed classification models to predict employee turnover,
+          identify important workforce patterns, and support data-informed
+          employee-retention decisions.
         </p>
       </div>
+
     </div>
   </section>
 
