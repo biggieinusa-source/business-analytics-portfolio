@@ -4,12 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Gerald Hlabiso | Business Analytics Portfolio</title>
+  <title>Gerald Hlabiso | Business and Data Analyst</title>
 
   <style>
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
     }
 
@@ -18,150 +16,185 @@
     }
 
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
       line-height: 1.6;
       color: #1f2937;
       background-color: #f8fafc;
     }
 
-    nav {
+    header {
       background-color: #0f172a;
+      color: white;
       padding: 18px 8%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: sticky;
-      top: 0;
+      flex-wrap: wrap;
     }
 
-    nav h2 {
-      color: white;
+    header h2 {
+      margin: 0;
     }
 
     nav a {
       color: white;
+      margin-left: 20px;
       text-decoration: none;
-      margin-left: 22px;
+      font-weight: bold;
     }
 
     nav a:hover {
       color: #38bdf8;
     }
 
+    section {
+      padding: 70px 8%;
+    }
+
     .hero {
-      min-height: 85vh;
-      padding: 100px 8%;
+      min-height: 520px;
+      background-color: #e2e8f0;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background: linear-gradient(135deg, #0f172a, #1d4ed8);
-      color: white;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+    }
+
+    .hero-text {
+      max-width: 650px;
     }
 
     .hero h1 {
-      font-size: 3.2rem;
-      margin-bottom: 15px;
+      margin-bottom: 5px;
+      font-size: 48px;
+      color: #0f172a;
     }
 
     .hero h3 {
-      font-size: 1.5rem;
-      color: #bae6fd;
-      margin-bottom: 20px;
+      margin-top: 0;
+      color: #0369a1;
+      font-size: 25px;
     }
 
-    .hero p {
-      max-width: 720px;
-      font-size: 1.1rem;
-      margin-bottom: 30px;
+    .headshot {
+      width: 280px;
+      height: 280px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 50%;
+      border: 7px solid white;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      flex-shrink: 0;
     }
 
     .button {
       display: inline-block;
-      background-color: #38bdf8;
-      color: #0f172a;
-      padding: 12px 22px;
+      margin-top: 15px;
       margin-right: 10px;
+      padding: 12px 20px;
+      color: white;
+      background-color: #0369a1;
       border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
     }
 
+    .button:hover {
+      background-color: #075985;
+    }
+
     .button.secondary {
-      background-color: transparent;
-      color: white;
-      border: 2px solid white;
+      background-color: #334155;
     }
 
-    section {
-      padding: 75px 8%;
+    .button.secondary:hover {
+      background-color: #1e293b;
     }
 
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 25px;
+    h2 {
       color: #0f172a;
+      font-size: 32px;
+      margin-bottom: 25px;
     }
 
     .skills,
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
     }
 
     .card {
-      background-color: white;
       padding: 25px;
+      background-color: white;
       border-radius: 10px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
     }
 
     .card h3 {
-      color: #1d4ed8;
-      margin-bottom: 12px;
+      color: #0369a1;
     }
 
-    #.headshot {
-  display: block;
-  width: 220px;
-  height: 220px;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: 50%;
-  margin: 0 auto 30px;
-  border: 5px solid white;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
-}
+    #about,
+    #projects {
+      background-color: white;
+    }
 
-#contact {
-  background-color: #e2e8f0;
-  text-align: center;
-}
+    #contact {
+      color: white;
+      text-align: center;
+      background-color: #0f172a;
+    }
+
+    #contact h2 {
+      color: white;
+    }
+
     #contact a {
-      color: #1d4ed8;
-      font-weight: bold;
-      text-decoration: none;
+      color: #38bdf8;
     }
 
     footer {
-      background-color: #0f172a;
+      padding: 15px;
       color: white;
       text-align: center;
-      padding: 22px;
+      background-color: #020617;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 800px) {
+      header {
+        justify-content: center;
+        text-align: center;
+      }
+
       nav {
-        flex-direction: column;
-        gap: 12px;
+        width: 100%;
+        margin-top: 12px;
       }
 
       nav a {
-        margin: 0 8px;
+        display: inline-block;
+        margin: 5px 8px;
+      }
+
+      .hero {
+        text-align: center;
+        flex-direction: column-reverse;
       }
 
       .hero h1 {
-        font-size: 2.3rem;
+        font-size: 38px;
+      }
+
+      .headshot {
+        width: 220px;
+        height: 220px;
+      }
+
+      .skills,
+      .projects {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -169,44 +202,54 @@
 
 <body>
 
-  <nav>
+  <header>
     <h2>Gerald Hlabiso</h2>
 
-    <div>
+    <nav>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
-    </div>
-  </nav>
-
-  <header class="hero">
-    <h1>Hello, I’m Gerald Hlabiso</h1>
-
-    <h3>Business and Data Analyst</h3>
-
-    <p>
-      M.S. Business Analytics candidate at Saint Louis University with
-      experience in financial services, lending, customer experience,
-      financial analysis, risk analysis and data-driven decision-making.
-    </p>
-
-    <div>
-      <a class="button" href="#projects">View My Projects</a>
-
-      <a class="button secondary"
-         href="https://github.com/biggieinusa-source"
-         target="_blank">
-         Visit GitHub
-      </a>
-    </div>
+    </nav>
   </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Gerald Hlabiso</h1>
+
+      <h3>Business and Data Analyst</h3>
+
+      <p>
+        M.S. Business Analytics candidate at Saint Louis University with
+        experience in financial services, lending, customer experience,
+        financial analysis, risk analysis and data-driven decision-making.
+      </p>
+
+      <div>
+        <a class="button" href="#projects">
+          View My Projects
+        </a>
+
+        <a
+          class="button secondary"
+          href="https://github.com/biggieinusa-source"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit GitHub
+        </a>
+      </div>
+    </div>
+
+    <img
+      class="headshot"
+      src="gerald-hlabiso-headshot.jpeg.jpeg"
+      alt="Professional headshot of Gerald Hlabiso"
+    >
+  </section>
 
   <section id="about">
     <h2>About Me</h2>
-    <img src="gerald-hlabiso-headshot.jpeg"
-     alt="Professional headshot of Gerald Hlabiso"
-     class="headshot">
 
     <p>
       I am a Business Analytics graduate student with more than five years
@@ -219,32 +262,43 @@
   </section>
 
   <section id="skills">
-    <h2>Technical Skills</h2>
+    <h2>Skills</h2>
 
     <div class="skills">
       <div class="card">
         <h3>Data Analysis</h3>
-        <p>Data cleaning, exploratory analysis, reporting and predictive modeling.</p>
+
+        <p>
+          Data cleaning, exploratory analysis, reporting and predictive
+          modeling.
+        </p>
       </div>
 
       <div class="card">
         <h3>Tools</h3>
-        <p>Excel, Power BI, SQL, Python and Google Colab.</p>
+
+        <p>
+          Excel, Power BI, SQL, Python and Google Colab.
+        </p>
       </div>
 
       <div class="card">
         <h3>Business Analysis</h3>
-        <p>Financial analysis, risk analysis, KPIs and process improvement.</p>
+
+        <p>
+          Financial analysis, risk analysis, KPIs and process improvement.
+        </p>
       </div>
     </div>
   </section>
 
   <section id="projects">
-    <h2>Featured Analytics Projects</h2>
+    <h2>Projects</h2>
 
     <div class="projects">
       <div class="card">
         <h3>Loan Default Risk Prediction</h3>
+
         <p>
           Developed a machine-learning model to identify applicants who may
           experience difficulty repaying a loan.
@@ -253,6 +307,7 @@
 
       <div class="card">
         <h3>Retail Sales Predictive Modeling</h3>
+
         <p>
           Compared multiple regression models to predict sales using pricing,
           promotions, inventory, seasonality and competitor information.
@@ -261,6 +316,7 @@
 
       <div class="card">
         <h3>Employee Turnover Classification</h3>
+
         <p>
           Developed classification models to predict employee turnover and
           support data-informed workforce-retention decisions.
@@ -272,14 +328,31 @@
   <section id="contact">
     <h2>Contact Me</h2>
 
-    <p>Email: <a href="mailto:geraldhlabiso@gmail.com">geraldhlabiso@gmail.com</a></p>
+    <p>
+      Email:
+      <a href="mailto:geraldhlabiso@gmail.com">
+        geraldhlabiso@gmail.com
+      </a>
+    </p>
 
     <p>
-      <a href="https://www.linkedin.com/in/gerald-hlabiso-9899a4161/"
-         target="_blank">LinkedIn</a>
+      <a
+        href="https://www.linkedin.com/in/gerald-hlabiso-9899a4161/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn
+      </a>
+
       |
-      <a href="https://github.com/biggieinusa-source"
-         target="_blank">GitHub</a>
+
+      <a
+        href="https://github.com/biggieinusa-source"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub
+      </a>
     </p>
   </section>
 
