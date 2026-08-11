@@ -140,6 +140,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 25px;
+      align-items: stretch;
     }
 
     .card {
@@ -147,6 +148,16 @@
       background-color: white;
       border-radius: 10px;
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    }
+
+    .projects .card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .projects .card .button {
+      margin-top: auto;
+      align-self: flex-start;
     }
 
     .card h3 {
@@ -216,6 +227,10 @@
       .skills,
       .projects {
         grid-template-columns: 1fr;
+      }
+
+      .projects .card .button {
+        align-self: center;
       }
     }
   </style>
@@ -340,11 +355,37 @@
         <h3>Loan Default Risk Prediction</h3>
 
         <p>
-          Developed a machine-learning model to identify applicants who may
-          experience difficulty repaying a loan. The project demonstrates the
-          application of predictive analytics to credit-risk assessment and
-          lending decisions.
+          Developed a machine-learning model to predict whether a loan
+          applicant may experience repayment difficulties. The project used
+          the Home Credit dataset containing 307,511 loan applications and
+          122 variables.
         </p>
+
+        <p>
+          <strong>Tools:</strong> Python, Pandas, NumPy, Scikit-learn,
+          TensorFlow/Keras, Matplotlib, Seaborn, Google Colab, and Gradio.
+        </p>
+
+        <p>
+          <strong>Methods:</strong> Data cleaning, missing-value imputation,
+          categorical encoding, feature scaling, financial-ratio engineering,
+          exploratory data analysis, and MLP classification.
+        </p>
+
+        <p>
+          <strong>Business value:</strong> The model estimates default
+          probability and assigns a risk category to support faster, more
+          consistent, and data-driven lending decisions.
+        </p>
+
+        <a
+          class="button"
+          href="https://github.com/biggieinusa-source/business-analytics-portfolio/blob/main/loan-default-risk-prediction.ipynb"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Project
+        </a>
       </div>
 
       <div class="card">
