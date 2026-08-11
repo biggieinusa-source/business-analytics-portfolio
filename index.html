@@ -115,6 +115,8 @@
       border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
+      border: none;
+      cursor: pointer;
     }
 
     .button:hover {
@@ -135,11 +137,16 @@
       margin-bottom: 25px;
     }
 
-    .skills,
-    .projects {
+    .skills {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 25px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
       align-items: stretch;
     }
 
@@ -163,6 +170,77 @@
     .card h3 {
       color: #0369a1;
       margin-top: 0;
+    }
+
+    .featured-project {
+      grid-column: 1 / -1;
+      padding: 30px;
+    }
+
+    .project-introduction {
+      max-width: 950px;
+      margin-bottom: 25px;
+    }
+
+    .dashboard-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 25px 0;
+    }
+
+    .dashboard-item {
+      margin: 0;
+      overflow: hidden;
+      background-color: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+    }
+
+    .dashboard-item a {
+      display: block;
+    }
+
+    .dashboard-image {
+      display: block;
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      object-position: top;
+      transition: transform 0.3s ease;
+    }
+
+    .dashboard-image:hover {
+      transform: scale(1.03);
+    }
+
+    .dashboard-item figcaption {
+      padding: 12px;
+      color: #334155;
+      background-color: white;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .key-findings {
+      padding: 20px 25px;
+      margin: 20px 0;
+      background-color: #eff6ff;
+      border-left: 5px solid #0369a1;
+      border-radius: 6px;
+    }
+
+    .key-findings h4 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #0f172a;
+      font-size: 19px;
+    }
+
+    .key-findings ul {
+      margin-bottom: 0;
+      padding-left: 20px;
     }
 
     #skills {
@@ -192,6 +270,16 @@
       color: white;
       text-align: center;
       background-color: #020617;
+    }
+
+    @media (max-width: 1000px) {
+      .dashboard-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .dashboard-image {
+        height: auto;
+      }
     }
 
     @media (max-width: 900px) {
@@ -227,6 +315,10 @@
       .skills,
       .projects {
         grid-template-columns: 1fr;
+      }
+
+      .featured-project {
+        grid-column: auto;
       }
 
       .projects .card .button {
@@ -389,22 +481,6 @@
         </a>
       </div>
 
-      <!-- Retail Sales Project -->
-      <div class="card">
-        <h3>Retail Sales Predictive Modeling</h3>
-
-        <p>
-          Compared multiple regression models to predict retail sales using
-          pricing, promotions, inventory, seasonality, store location, and
-          competitor information.
-        </p>
-
-        <p>
-          <strong>Project status:</strong> Currently being reviewed and
-          improved before publication.
-        </p>
-      </div>
-
       <!-- Employee Turnover Project -->
       <div class="card">
         <h3>Employee Turnover Classification</h3>
@@ -442,6 +518,139 @@
         >
           View Project
         </a>
+      </div>
+
+      <!-- Featured Power BI Retail Project -->
+      <div class="card featured-project">
+        <h3>
+          Evolution of U.S. Consumer Retail Behavior (2010–2025)
+        </h3>
+
+        <div class="project-introduction">
+          <p>
+            Created an interactive Power BI report to analyze the long-term
+            shift from physical retail to e-commerce in the United States. The
+            project evaluates retail-sales trends, differences in online
+            adoption across business categories, and the structural effect of
+            the 2020 pandemic on consumer purchasing behavior.
+          </p>
+
+          <p>
+            <strong>Tools:</strong> Power BI, Power Query, DAX, data
+            visualization, trend analysis, and business storytelling.
+          </p>
+        </div>
+
+        <div class="dashboard-gallery">
+
+          <figure class="dashboard-item">
+            <a
+              href="retail-overall-trends.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="dashboard-image"
+                src="retail-overall-trends.jpg"
+                alt="Power BI dashboard showing overall U.S. retail and e-commerce trends"
+              >
+            </a>
+
+            <figcaption>
+              Overall Retail and E-commerce Trends
+            </figcaption>
+          </figure>
+
+          <figure class="dashboard-item">
+            <a
+              href="retail-category-comparison.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="dashboard-image"
+                src="retail-category-comparison.jpg"
+                alt="Power BI dashboard comparing e-commerce adoption across retail categories"
+              >
+            </a>
+
+            <figcaption>
+              Retail Category Comparison
+            </figcaption>
+          </figure>
+
+          <figure class="dashboard-item">
+            <a
+              href="retail-pandemic-analysis.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="dashboard-image"
+                src="retail-pandemic-analysis.jpg"
+                alt="Power BI dashboard comparing retail behavior before and after 2020"
+              >
+            </a>
+
+            <figcaption>
+              Pre-2020 Versus Post-2020 Analysis
+            </figcaption>
+          </figure>
+
+        </div>
+
+        <div class="key-findings">
+          <h4>Key Findings</h4>
+
+          <ul>
+            <li>
+              E-commerce sales grew faster than physical retail sales during
+              the analysis period.
+            </li>
+
+            <li>
+              Online sales represented an increasing share of total U.S.
+              retail activity.
+            </li>
+
+            <li>
+              Retail categories showed different levels of online adoption
+              and digital-sales growth.
+            </li>
+
+            <li>
+              Online retail penetration increased significantly after 2020
+              and remained above its pre-pandemic trend.
+            </li>
+          </ul>
+        </div>
+
+        <p>
+          <strong>Business value:</strong> The dashboard helps retail
+          strategists, investors, policymakers, commercial real-estate
+          analysts, and business leaders understand changes in consumer
+          behavior and evaluate exposure to digital disruption.
+        </p>
+
+        <div>
+          <a
+            class="button"
+            href="https://github.com/biggieinusa-source/business-analytics-portfolio/blob/main/Evolution%20of%20U.S.%20Consumer%20Retail%20Behavior%20(2010%E2%80%932025).pbix"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Power BI Project
+          </a>
+
+          <a
+            class="button secondary"
+            href="retail-overall-trends.jpg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Full Dashboard
+          </a>
+        </div>
       </div>
 
     </div>
