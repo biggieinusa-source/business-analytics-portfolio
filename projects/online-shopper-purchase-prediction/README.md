@@ -2,15 +2,9 @@
 
 ## Project Overview
 
-This Power BI project analyzes 2,441 scored online-shopping sessions to explain purchase behavior, compare classification-model results, identify important purchase drivers, and communicate prediction outcomes through an interactive dashboard.
+This end-to-end analytics project combines Python machine learning with Power BI to predict whether an online-shopping session will result in a purchase.
 
-The report is designed to help marketing, e-commerce, and analytics teams understand:
-
-- How frequently website sessions result in purchases
-- Which model provides the strongest predictive performance
-- Which behavioral features are most associated with purchases
-- How conversion varies by month and visitor type
-- Where the prediction process produces correct and incorrect classifications
+The analysis uses 12,330 website sessions. Logistic Regression, Decision Tree and Random Forest models were trained and evaluated. The 2,441 test sessions, prediction outcomes, model-performance results and feature-importance values were exported to Power BI for interactive analysis.
 
 ## Dashboard Preview
 
@@ -20,7 +14,7 @@ The report is designed to help marketing, e-commerce, and analytics teams unders
 
 | Metric | Result |
 |---|---:|
-| Total Sessions | 2,441 |
+| Test Sessions | 2,441 |
 | Actual Purchases | 382 |
 | Conversion Rate | 15.65% |
 | Prediction Accuracy | 72.88% |
@@ -35,6 +29,17 @@ The report is designed to help marketing, e-commerce, and analytics teams unders
 - New visitors converted at a substantially higher rate than returning visitors.
 - Prediction outcomes included 1,545 true negatives, 514 false positives, 234 true positives and 148 false negatives.
 
+## Machine-Learning Workflow
+
+1. Loaded and inspected 12,330 online-shopping sessions.
+2. Prepared numerical, categorical and Boolean predictors.
+3. Split the dataset into training and testing samples.
+4. Standardized numerical variables and one-hot encoded categorical variables.
+5. Trained Logistic Regression, Decision Tree and Random Forest classifiers.
+6. Compared accuracy, precision, recall, F1-score and ROC-AUC.
+7. Generated confusion-matrix categories and feature-importance results.
+8. Exported the 2,441 scored test sessions and model results to Power BI.
+
 ## Dashboard Features
 
 - Month-controlled interactive slicer
@@ -43,32 +48,38 @@ The report is designed to help marketing, e-commerce, and analytics teams unders
 - Top-eight purchase-driver analysis
 - Monthly conversion-rate trend
 - Visitor-type conversion comparison
-- Confusion-matrix outcome visualization
+- Prediction-outcome visualization
 - Chronological month sorting through a dedicated month table
 
-## Tools and Techniques
+## Tools and Technologies
 
+- Python
+- Google Colab
+- Pandas and NumPy
+- Scikit-learn
+- Matplotlib and Seaborn
+- Logistic Regression
+- Decision Tree
+- Random Forest
 - Microsoft Power BI Desktop
 - Power Query
 - DAX measures
 - Data modelling and relationships
-- Interactive slicers
-- Conditional visual interactions
-- KPI and predictive-performance visualization
-- Business-insight development
+- Interactive slicers and visual interactions
 
 ## Business Recommendations
 
-1. Investigate the acquisition channels, campaigns and landing-page experiences associated with converting new visitors.
+1. Investigate the acquisition channels and landing-page experiences associated with converting new visitors.
 2. Apply successful first-visit experiences to the larger returning-visitor population.
 3. Reduce exit and bounce behavior on product-related pages.
-4. Improve product-page content and engagement because product-related duration is a major prediction driver.
-5. Prioritize improvements that reduce false positives, which represent the largest model-error category.
-6. Use the monthly conversion trend to plan campaigns around stronger seasonal periods.
+4. Improve product-page content because product-related duration is a major prediction driver.
+5. Prioritize reducing false positives, which represent the largest prediction-error category.
+6. Use monthly conversion trends to plan campaigns around stronger seasonal periods.
 
-## Download the Power BI Report
+## Project Files
 
-[Download the Power BI dashboard file](online-shopper-purchase-prediction-dashboard.pbix)
+- [View the Python machine-learning notebook](online-shopper-purchase-prediction-model.ipynb)
+- [Download the Power BI dashboard](online-shopper-purchase-prediction-dashboard.pbix)
 
 > The public interactive Power BI link will be added after Power BI Service access is approved.
 
