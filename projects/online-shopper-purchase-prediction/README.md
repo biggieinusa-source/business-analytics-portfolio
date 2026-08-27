@@ -2,9 +2,15 @@
 
 ## Project Overview
 
-This end-to-end analytics project combines Python machine learning with Power BI to predict whether an online-shopping session will result in a purchase.
+This end-to-end predictive analytics project examines whether the behavior recorded during an online-shopping session can be used to predict if the visitor will complete a purchase. The business objective is to help e-commerce teams recognize high-intent sessions, understand the behaviors associated with conversion, and identify opportunities to improve the customer journey particularly among the much larger group of returning visitors.
 
-The analysis uses 12,330 website sessions. Logistic Regression, Decision Tree and Random Forest models were trained and evaluated. The 2,441 test sessions, prediction outcomes, model-performance results and feature-importance values were exported to Power BI for interactive analysis.
+The analysis began with 12,330 website sessions containing behavioral, technical, and contextual variables. These included the number of administrative, informational, and product-related pages visited; time spent on each page category; bounce and exit rates; page value; month; visitor type; weekend activity; browser; operating system; region; and traffic source. The target variable, Revenue, identified whether each session ended in a purchase.
+
+In Google Colab, the data was inspected, prepared, and divided into training and testing samples. Numerical variables were standardized, categorical variables were one-hot encoded, and balanced class weights were used to account for the smaller proportion of purchasing sessions. Three classification models: Logistic Regression, Decision Tree, and Random Forest were trained and compared using accuracy, precision, recall, F1-score, and ROC-AUC. This broader evaluation was important because accuracy alone would not explain how well the models identified actual purchasers or the trade-off between false positives and false negatives.
+Random Forest produced the strongest overall ROC-AUC at 78.2%, while Logistic Regression achieved the highest recall at 78.3%. The model results also revealed that exit rate and time spent on product-related pages were among the most influential predictors of purchase behavior. These findings help translate the modelling process into practical questions about product-page engagement, visitor acquisition, and website abandonment.
+
+The final stage connected the machine-learning results to Power BI. A total of 2,441 scored test sessions, prediction probabilities, confusion-matrix outcomes, model-performance metrics, and feature-importance values were exported for interactive reporting. The resulting dashboard presents overall conversion performance, model comparisons, prediction outcomes, monthly conversion trends, visitor-type differences, and the leading purchase predictors. A user-controlled Month slicer allows decision-makers to examine session-level results for individual months while retaining overall model-performance context.
+The completed solution demonstrates a full analytics workflow: defining a business problem, preparing data, training and evaluating classification models, exporting prediction results, developing DAX measures and relationships, and communicating findings through an interactive decision-support dashboard.
 
 ## Dashboard Preview
 
