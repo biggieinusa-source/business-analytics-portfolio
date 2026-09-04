@@ -190,6 +190,13 @@
       margin: 25px 0;
     }
 
+    .risk-dashboard-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin: 25px 0;
+    }
+
     .gallery-item {
       margin: 0;
       overflow: hidden;
@@ -298,7 +305,8 @@
 
     @media (max-width: 1000px) {
       .dashboard-gallery,
-      .healthcare-gallery {
+      .healthcare-gallery,
+      .risk-dashboard-gallery {
         grid-template-columns: 1fr;
       }
 
@@ -465,6 +473,121 @@
     <h2>Projects</h2>
 
     <div class="projects">
+
+      <!-- Portfolio Volatility Risk Scanner -->
+      <div class="card featured-project">
+        <h3>Portfolio Volatility Risk Scanner</h3>
+
+        <div class="project-introduction">
+          <p>
+            Built an end-to-end market-risk analytics project that combines
+            Python machine learning with an interactive Power BI dashboard to
+            identify securities with elevated future-volatility risk.
+          </p>
+
+          <p>
+            The project scores 204,135 security-date observations covering 502
+            securities, compares Logistic Regression and XGBoost, and converts
+            predicted probabilities into user-controlled risk alerts.
+          </p>
+
+          <p>
+            <strong>Result:</strong> The selected Logistic Regression model
+            achieved 88.6% recall, a 55.2% F1 score, and a 68.7% ROC-AUC on the
+            final test period. The dashboard exposes the trade-off between
+            detecting volatility events and managing false-positive alerts.
+          </p>
+        </div>
+
+        <div class="technology-list">
+          <span class="technology">Python</span>
+          <span class="technology">Google Colab</span>
+          <span class="technology">Pandas</span>
+          <span class="technology">Scikit-learn</span>
+          <span class="technology">XGBoost</span>
+          <span class="technology">Power BI</span>
+          <span class="technology">Power Query</span>
+          <span class="technology">DAX</span>
+        </div>
+
+        <div class="risk-dashboard-gallery">
+          <figure class="gallery-item">
+            <a
+              href="projects/portfolio-risk-scanner/images/risk-monitor-dashboard.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="gallery-image"
+                src="projects/portfolio-risk-scanner/images/risk-monitor-dashboard.jpg"
+                alt="Portfolio Volatility Risk Scanner monitoring dashboard"
+              >
+            </a>
+            <figcaption>Portfolio Risk Monitor</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <a
+              href="projects/portfolio-risk-scanner/images/model-insights-dashboard.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="gallery-image"
+                src="projects/portfolio-risk-scanner/images/model-insights-dashboard.jpg"
+                alt="Portfolio volatility model insights dashboard"
+              >
+            </a>
+            <figcaption>Volatility Model Insights</figcaption>
+          </figure>
+        </div>
+
+        <div class="project-details">
+          <h4>Key Findings</h4>
+          <ul>
+            <li>The selected model detected 88.6% of final-test volatility events.</li>
+            <li>VIX was the leading model driver, with 22.6% relative importance.</li>
+            <li>The 40.1% precision and 75.6% alert rate reveal a material alert-fatigue risk.</li>
+            <li>The adjustable threshold lets users explore the precision-recall trade-off.</li>
+          </ul>
+        </div>
+
+        <div>
+          <a
+            class="button"
+            href="https://github.com/gerald-hlabiso/business-analytics-portfolio/tree/main/projects/portfolio-risk-scanner"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Complete Project
+          </a>
+
+          <a
+            class="button secondary"
+            href="https://github.com/gerald-hlabiso/business-analytics-portfolio/blob/main/projects/portfolio-risk-scanner/notebooks/portfolio_risk_scanner.ipynb"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Python Notebook
+          </a>
+
+          <a
+            class="button secondary"
+            href="projects/portfolio-risk-scanner/power-bi/portfolio-volatility-risk-scanner.pbix"
+          >
+            Download Power BI File
+          </a>
+
+          <a
+            class="button secondary"
+            href="projects/portfolio-risk-scanner/power-bi/portfolio-volatility-risk-scanner.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Dashboard PDF
+          </a>
+        </div>
+      </div>
 
       <!-- Online Shopper Purchase Prediction Project -->
 <div class="card featured-project">
